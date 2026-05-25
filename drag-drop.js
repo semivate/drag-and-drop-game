@@ -1514,7 +1514,7 @@
               sceneItem.y = finalLocalPos.y + sceneItem.offset.y;
             }
 
-            if (stage.mouseY >= 750 && stage.mouseY <= 1220) {
+            if (sceneItem.y >= 750 && sceneItem.y <= 1220) {
               if (sceneItem.x < 60) sceneItem.x = 60;
               if (sceneItem.x > 660) sceneItem.x = 660;
             } else {
