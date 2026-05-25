@@ -37,7 +37,8 @@ The gameplay involves the player picking up a piece, rotating it correctly, and 
 1.  Understanding why it is absolutely essential not to use the Cyrillic alphabet in code during development.
 2.  Working with the lifecycle of mouse and keyboard events (Event Listeners), which protects the game from freezing.
 3.  The difference between global scene coordinates and local layer/container coordinates in Adobe Animate.
-4.  Adapting the interface for smartphone portrait screens and working with the WebAudio API without overloading RAM.
+4.  Нow to compensate for coordinate errors when resizing the Canvas by using the absolute mouse vector instead of the object's dynamic positions.
+5.  Adapting the interface for smartphone portrait screens and working with the WebAudio API without overloading RAM.
 
 ---
 

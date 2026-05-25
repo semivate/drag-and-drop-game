@@ -1503,19 +1503,18 @@
             createjs.Sound.play("dropClick");
             sceneItem.cursor = "pointer";
 
-            const currentGlobalY = sceneItem.y;
-
             if (sceneItem.myOriginalParent) {
-              sceneItem.myOriginalParent.addChild(sceneItem);
-              const localPos = sceneItem.myOriginalParent.globalToLocal(
-                sceneItem.x,
-                currentGlobalY,
+              const finalLocalPos = sceneItem.myOriginalParent.globalToLocal(
+                stage.mouseX,
+                stage.mouseY,
               );
-              sceneItem.x = localPos.x;
-              sceneItem.y = localPos.y;
+
+              sceneItem.myOriginalParent.addChild(sceneItem);
+              sceneItem.x = finalLocalPos.x + sceneItem.offset.x;
+              sceneItem.y = finalLocalPos.y + sceneItem.offset.y;
             }
 
-            if (currentGlobalY >= 750 && currentGlobalY <= 1220) {
+            if (stage.mouseY >= 750 && stage.mouseY <= 1220) {
               if (sceneItem.x < 60) sceneItem.x = 60;
               if (sceneItem.x > 660) sceneItem.x = 660;
             } else {
