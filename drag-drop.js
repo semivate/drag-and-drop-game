@@ -1362,7 +1362,9 @@
             snapPoint.visible = true;
           }
 
-          if (createjs.Touch.isTouch) {
+          const isMobileDevice = window.matchMedia("(pointer: coarse)").matches;
+
+          if (isMobileDevice) {
             item.rotation = 0;
           } else {
             item.rotation =
