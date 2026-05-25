@@ -1310,9 +1310,9 @@
       const allowedAngles = [0, 90, 180, 270];
 
       createjs.Sound.removeAllSounds();
-      createjs.Sound.registerSound("sounds/pickClick.mp3", "pickClick");
-      createjs.Sound.registerSound("sounds/dropClick.mp3", "dropClick");
-      createjs.Sound.registerSound("sounds/actionClick.mp3", "actionClick");
+      createjs.Sound.registerSound("./sounds/pickClick.mp3", "pickClick");
+      createjs.Sound.registerSound("./sounds/dropClick.mp3", "dropClick");
+      createjs.Sound.registerSound("./sounds/actionClick.mp3", "actionClick");
 
       const toggleOtherItemsMouse = (enable) => {
         for (let i = 0; i < totalItems; i++) {
